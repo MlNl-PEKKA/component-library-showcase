@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "component-showcase",
   "private": true,
   "scripts": {
     "build": "turbo run build",
