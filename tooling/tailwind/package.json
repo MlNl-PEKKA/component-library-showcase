@@ -1,34 +1,31 @@
 {
-  "name": "@acme/nextjs",
+  "name": "@acme/tailwind-config",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "exports": {
+    "./native": "./native.ts",
+    "./web": "./web.ts"
+  },
+  "license": "MIT",
   "scripts": {
-    "build": "pnpm next build",
-    "clean": "git clean -xdf .cache .next .turbo node_modules",
-    "dev": "pnpm next dev --turbopack",
+    "clean": "git clean -xdf .cache .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
-    "start": "pnpm next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^15.3.3",
-    "react": "catalog:react19",
-    "react-dom": "catalog:react19"
+    "postcss": "^8.5.4",
+    "tailwindcss": "catalog:",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
     "@acme/prettier-config": "workspace:*",
-    "@acme/tailwind-config": "workspace:*",
     "@acme/tsconfig": "workspace:*",
     "@types/node": "^22.15.29",
-    "@types/react": "catalog:react19",
-    "@types/react-dom": "catalog:react19",
-    "dotenv-cli": "^8.0.0",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "prettier": "@acme/prettier-config"
